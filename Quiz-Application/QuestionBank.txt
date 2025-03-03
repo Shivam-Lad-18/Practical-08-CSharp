@@ -1,0 +1,5 @@
+﻿Easy|What is 2+2?|2|3|4|5|C
+Easy|What color is the sky?|Red|Blue|Green|Yellow|B
+Medium|Capital of France?|Berlin|Madrid|Paris|Rome|C
+Medium|Who invented C?|James|Dennis|Guido|Bjarne|B
+Hard|First human in space?|Neil|Buzz|Yuri|Alan|C
