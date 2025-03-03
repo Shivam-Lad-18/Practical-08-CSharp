@@ -1,5 +1,86 @@
-﻿Easy|What is 2+2?|2|3|4|5|C
-Easy|What color is the sky?|Red|Blue|Green|Yellow|B
-Medium|Capital of France?|Berlin|Madrid|Paris|Rome|C
-Medium|Who invented C?|James|Dennis|Guido|Bjarne|B
-Hard|First human in space?|Neil|Buzz|Yuri|Alan|C
+﻿Easy|What does OOP stand for?|Object Oriented Programming|Object Only Programming|Only Object Programming|Other Object Programming|A
+Easy|Which of these is a pillar of OOP?|Abstraction|Looping|Compilation|Recursion|A
+Easy|What is the purpose of a class?|To create loops|To define objects|To store integers|To write comments|B
+Easy|Which keyword is used to create an object in C#?|new|class|object|instance|A
+Easy|Which OOP concept hides internal implementation?|Abstraction|Encapsulation|Inheritance|Polymorphism|B
+Easy|In OOP, a blueprint for objects is called?|Class|Interface|Method|Constructor|A
+Easy|What is the default access modifier in a class?|public|private|protected|internal|B
+Easy|Which concept allows creating multiple methods with same name but different parameters?|Encapsulation|Overloading|Overriding|Abstraction|B
+Easy|A class derived from another class is called?|Child Class|Base Class|Parent Class|Main Class|A
+Easy|Which of these allows runtime polymorphism?|Overloading|Overriding|Constructor|Destructor|B
+Easy|What keyword is used to define a class in C#?|class|object|method|new|A
+Easy|What do you call an instance of a class?|Method|Variable|Object|Function|C
+Easy|What keyword is used to inherit from a base class?|base|inherits|extends|:|D
+Easy|Which of the following is NOT a pillar of OOP?|Encapsulation|Inheritance|Abstraction|Compilation|D
+Easy|Which member type can be accessed without creating an object?|Instance Member|Static Member|Private Member|Protected Member|B
+Easy|Which OOP concept deals with exposing only essential information?|Inheritance|Encapsulation|Abstraction|Overloading|C
+Easy|What is the parent class for all .NET classes?|BaseClass|System|Object|MainClass|C
+Easy|What do you call the process of creating an object from a class?|Cloning|Instantiation|Overloading|Encapsulation|B
+Easy|Which keyword is used to prevent inheritance in C#?|abstract|virtual|sealed|override|C
+Easy|What type of method provides different implementations based on the parameters?|Method Overriding|Method Overloading|Abstraction|Encapsulation|B
+Easy|Which concept allows a class to have multiple methods with the same name but different signatures?|Polymorphism|Overriding|Overloading|Encapsulation|C
+Easy|Which of these can a class in C# inherit from?|Only One Class|Multiple Classes|Only Interfaces|Only Abstract Classes|A
+Easy|What is the access modifier for members accessible within the same assembly?|public|internal|protected|private|B
+Easy|What is the default base class for every class in C#?|System|Base|Object|Main|C
+Easy|Which keyword is used to define an interface in C#?|class|interface|struct|abstract|B
+Easy|Can a class inherit from multiple interfaces?|Yes|No|Only if they are abstract|Only in sealed classes|A
+Easy|Which OOP concept ensures data hiding within a class?|Encapsulation|Abstraction|Inheritance|Polymorphism|A
+Easy|What is the keyword to inherit from a class?|extends|inherits|base|:|D
+Easy|What does the keyword 'sealed' do to a class?|Prevents Inheritance|Prevents Instantiation|Allows Multiple Inheritance|Makes it Static|A
+Easy|Can a static method access non-static members directly?|Yes|No|Only in same class|Only in derived class|B
+
+Medium|Which concept allows a derived class to override a base class method?|Abstraction|Encapsulation|Inheritance|Polymorphism|D
+Medium|Which access modifier allows access only within the same class?|private|public|protected|internal|A
+Medium|What is the term for hiding complex logic inside a method?|Encapsulation|Inheritance|Polymorphism|Overloading|A
+Medium|What is a sealed class in C#?|Class with many methods|Class that cannot be inherited|Class with only static methods|Class with no constructor|B
+Medium|Which keyword is used to inherit a class?|implements|extends|inherits|:|D
+Medium|What happens if a class does not provide implementation of an interface method?|Compilation Error|Runtime Error|Ignored|Automatically Implemented|A
+Medium|Can abstract classes have constructors?|Yes|No|Sometimes|Only if they are sealed|A
+Medium|What type of method must a derived class override?|static|abstract|private|sealed|B
+Medium|Which OOP principle allows code reuse?|Polymorphism|Abstraction|Inheritance|Encapsulation|C
+Medium|Which keyword is used to refer to the parent class in C#?|this|base|super|parent|B
+Medium|What is the base class of all exceptions in C#?|Exception|Error|System.Exception|BaseException|C
+Medium|Can a constructor be private?|Yes|No|Only if the class is sealed|Only in interfaces|A
+Medium|What does the 'virtual' keyword mean in C#?|Method can be overridden|Method is abstract|Method is private|Method is sealed|A
+Medium|Which of the following supports multiple inheritance?|Class|Struct|Interface|Constructor|C
+Medium|What is the purpose of 'this' keyword?|Refer to current object|Refer to base class|Refer to global variable|Invoke a method|A
+Medium|What is a destructor in C#?|Method to destroy object|Method to free memory|Method to clean up resources|All of the above|D
+Medium|What is the difference between 'abstract' and 'virtual' methods?|Abstract has no body|Virtual has a body|Both A and B|Neither|C
+Medium|Can a static class be instantiated?|Yes|No|Only if it has a constructor|Only if it implements an interface|B
+Medium|What is the main purpose of an interface?|To store data|To enforce contract|To replace class|To provide default implementation|B
+Medium|Can a class inherit from multiple base classes in C#?|Yes|No|Only abstract classes|Only if they are sealed|B
+Medium|Which of the following can abstract classes NOT do?|Be instantiated|Have constructors|Have abstract methods|Have regular methods|A
+Medium|What is shadowing in OOP?|Hiding a base class member in derived class|Using same method name in different class|Overriding a private method|Creating static members|A
+Medium|What is the relationship between class and object?|Object creates class|Class defines object|Class inherits object|Object is a constructor|B
+Medium|Which keyword prevents a method from being overridden?|sealed|override|abstract|virtual|A
+Medium|What is the purpose of 'base' keyword in a constructor?|Call parent constructor|Create base object|Prevent inheritance|None of these|A
+Medium|Can an interface have fields in C#?|Yes|No|Only if they are static|Only if they are const|B
+Medium|What is the difference between 'is' and 'as' operators?|is checks type, as casts type|is creates object, as defines type|is only for interfaces, as only for classes|Both are same|A
+Medium|What happens if constructor throws exception?|Object is still created|Object creation fails|Only static members are created|None of these|B
+Medium|What is an implicit interface implementation?|Method is public and matches interface signature|Method is private and matches signature|Method has different name|Interface methods are optional|A
+Medium|What is the use of 'abstract' keyword with a class?|It cannot be instantiated|It can only have abstract methods|It must be static|It has private constructor|A
+
+Hard|Can a class implement multiple interfaces in C#?|Yes|No|Only two|Only if they are sealed|A
+Hard|Which OOP concept allows treating different types of objects as the same type?|Abstraction|Polymorphism|Encapsulation|Method Overloading|B
+Hard|In C#, which access modifier allows access only within the same assembly?|internal|protected|private|public|A
+Hard|What is a virtual method in C#?|Method that runs in virtual machine|Method that can be overridden|Method without implementation|Method only for static classes|B
+Hard|Which keyword is used to explicitly implement an interface method?|base|explicit|this|none|B
+Hard|What happens if an abstract method is not overridden in derived class?|Compile Error|Runtime Error|Ignored|Automatically implemented|A
+Hard|What is method hiding in C#?|Using 'new' to redefine a method in child class|Overriding base class method|Creating private methods|None of the above|A
+Hard|What is the difference between 'override' and 'new' in C#?|Override replaces base method|New hides base method|Both A and B|None|C
+Hard|Can a constructor be marked virtual?|Yes|No|Only in abstract classes|Only in sealed classes|B
+Hard|What is the keyword to implement interface explicitly?|this|explicit|base|none|B
+Hard|What is a delegate in C#?|Class|Pointer to method|Event|Interface|B
+Hard|What is covariance in C#?|Return derived type when base type is expected|Overriding base class methods|Using 'new' keyword|None of the above|A
+Hard|What is an abstract class?|Class that cannot be inherited|Class without implementation|Class with at least one abstract method|Class that implements interface|C
+Hard|Can a sealed class have child classes?|Yes|No|Only if it’s static|Only if it’s partial|B
+Hard|What is the maximum number of interfaces a class can implement?|1|5|Unlimited|10|C
+Hard|What is the purpose of 'IDisposable' interface?|To handle events|To release unmanaged resources|To control inheritance|To manage collections|B
+Hard|Can a struct inherit from a class?|Yes|No|Only from sealed class|Only from abstract class|B
+Hard|What is the term for treating objects of different classes through a common interface?|Abstraction|Polymorphism|Encapsulation|Overloading|B
+Hard|Which design pattern heavily relies on interfaces in OOP?|Singleton|Factory|Prototype|Adapter|B
+Hard|Which modifier allows derived class access but prevents outside access?|protected|private|internal|sealed|A
+Hard|What is deep copy in OOP?|Copying all fields including nested objects|Copying only reference|Copying only value types|Creating a shallow clone|A
+Hard|Can we override static methods?|Yes|No|Only in abstract class|Only in sealed class|B
+Hard|What happens if a derived class does not override an abstract method?|Compile Error|Runtime Error|Ignored|Automatically implemented|A
+Hard|What is a partial class in C#?|Class split into multiple files|Class with private constructor|Class with sealed methods|Class with abstract members|A
