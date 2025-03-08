@@ -15,10 +15,5 @@
         {
             return (int)(DateTime.Now - StartTime).TotalSeconds;
         }
-
-        public int GetRemainingTime()
-        {
-            return TotalTime - GetTimeElapsed();
-        }
     }
 }

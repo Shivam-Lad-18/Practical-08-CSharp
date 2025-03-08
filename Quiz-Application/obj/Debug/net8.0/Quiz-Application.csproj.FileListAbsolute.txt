@@ -12,3 +12,4 @@ C:\Users\HP\source\repos\Quiz-Application\Quiz-Application\obj\Debug\net8.0\refi
 C:\Users\HP\source\repos\Quiz-Application\Quiz-Application\obj\Debug\net8.0\Quiz-Application.pdb
 C:\Users\HP\source\repos\Quiz-Application\Quiz-Application\obj\Debug\net8.0\Quiz-Application.genruntimeconfig.cache
 C:\Users\HP\source\repos\Quiz-Application\Quiz-Application\obj\Debug\net8.0\ref\Quiz-Application.dll
+C:\Users\HP\source\repos\Quiz-Application\Quiz-Application\obj\Debug\net8.0\Quiz-Application.sourcelink.json

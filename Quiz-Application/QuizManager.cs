@@ -38,7 +38,7 @@
 
                     if (string.IsNullOrEmpty(answer))
                     {
-                        Console.WriteLine("⏰ Time's up! No answer selected.");
+                        Console.WriteLine("Time's up! No answer selected.");
                         wrong++;
                     }
                     else if (answer.ToUpper() == question.CorrectAnswer.ToUpper())
@@ -56,7 +56,7 @@
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"⚠️ Error: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
 
@@ -78,7 +78,6 @@
             }
 
             timer.TotalTime = timer.TimePerQuestion * questionCount;
-            Console.WriteLine($"✅ Timer set to: {timer.TimePerQuestion} seconds per question ({timer.TotalTime} seconds total)");
         }
 
         private string ReadAnswerWithTimeout(int seconds)
@@ -90,11 +89,19 @@
             {
                 if (Console.KeyAvailable)
                 {
+                    EnterOption:
                     answer = Console.ReadLine().Trim();
-                    return answer; // User answered within time
+                    if(answer.ToUpper() == "A" || answer.ToUpper() == "B" || answer.ToUpper() == "C" || answer.ToUpper() == "D")
+                    {
+                        return answer; // User answered within time
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid option. Please enter A, B, C or D.");
+                        goto EnterOption;
+                    }
                 }
             }
-
             return ""; // Time ran out
         }
 
@@ -109,9 +116,6 @@
             double score = ((double)correct / totalQuestions) * 100;
             Console.WriteLine($"🎉 Final Score: {score:F2}% - {(score > 70 ? "Great Job!" : "Keep Practicing")}");
 
-            Console.WriteLine("\nWhat next?");
-            Console.WriteLine("1. Play Again");
-            Console.WriteLine("2. Exit");
         }
     }
 }
