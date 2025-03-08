@@ -109,12 +109,12 @@
         {
             Console.Clear();
             Console.WriteLine("Quiz Complete!");
-            Console.WriteLine($"✅ Correct: {correct}");
-            Console.WriteLine($"❌ Wrong: {wrong}");
-            Console.WriteLine($"⏳ Time Taken: {timeTaken} seconds");
+            Console.WriteLine($"Correct: {correct}");
+            Console.WriteLine($"Wrong: {wrong}");
+            Console.WriteLine($"Time Taken: {timeTaken} seconds");
 
             double score = ((double)correct / totalQuestions) * 100;
-            Console.WriteLine($"🎉 Final Score: {score:F2}% - {(score > 70 ? "Great Job!" : "Keep Practicing")}");
+            Console.WriteLine($"Final Score: {score:F2}% - {(score > 70 ? "Great Job!" : "Keep Practicing")}");
 
         }
     }
