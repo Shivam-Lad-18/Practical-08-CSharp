@@ -17,9 +17,13 @@
         {
             try
             {
+                // Load questions based on difficulty and count
                 questions = questionLoader.LoadQuestions(questionCount, difficulty);
+
+                // Set the timer according to difficulty
                 SetTimerBasedOnDifficulty(difficulty, questionCount);
 
+                // Start the timer
                 timer.StartTimer();
 
                 int correct = 0;
@@ -29,9 +33,10 @@
                 {
                     Console.Clear();
                     Console.WriteLine($"Question {i + 1}/{questions.Count}:");
+                    Console.WriteLine($"\nTime per question: {timer.TimePerQuestion} seconds ({difficulty})\n");
 
                     var question = questions[i];
-                    question.DisplayQuestion();
+                    question.DisplayQuestion(); // Display the question and options
 
                     Console.Write("Your Answer: ");
                     string answer = ReadAnswerWithTimeout(timer.TimePerQuestion);
@@ -43,15 +48,18 @@
                     }
                     else if (answer.ToUpper() == question.CorrectAnswer.ToUpper())
                     {
-                        correct++;
+                        correct++; // Correct answer
                     }
                     else
                     {
-                        wrong++;
+                        wrong++; // Wrong answer
                     }
                 }
 
+                // Calculate total time taken
                 int timeTaken = timer.GetTimeElapsed();
+
+                // Display final results
                 ShowResults(correct, wrong, timeTaken, questionCount);
             }
             catch (Exception ex)
@@ -62,21 +70,23 @@
 
         private void SetTimerBasedOnDifficulty(string difficulty, int questionCount)
         {
+            // Set time per question based on difficulty level
             switch (difficulty.ToLower())
             {
                 case "easy":
-                    timer.TimePerQuestion = 13;
+                    timer.TimePerQuestion = 10;  // Quick recall-type questions
                     break;
                 case "medium":
-                    timer.TimePerQuestion = 10;
+                    timer.TimePerQuestion = 15;  // Slightly tricky questions
                     break;
                 case "hard":
-                    timer.TimePerQuestion = 7;
+                    timer.TimePerQuestion = 20;  // Logical or multi-step questions
                     break;
                 default:
                     throw new Exception("Invalid difficulty level!");
             }
 
+            // Calculate total quiz time
             timer.TotalTime = timer.TimePerQuestion * questionCount;
         }
 
@@ -85,24 +95,27 @@
             string answer = string.Empty;
             DateTime deadline = DateTime.Now.AddSeconds(seconds);
 
+            // Wait for user input within the given time
             while (DateTime.Now < deadline)
             {
                 if (Console.KeyAvailable)
                 {
-                    EnterOption:
+                EnterOption:
                     answer = Console.ReadLine().Trim();
-                    if(answer.ToUpper() == "A" || answer.ToUpper() == "B" || answer.ToUpper() == "C" || answer.ToUpper() == "D")
+
+                    // Ensure valid input (A, B, C, or D)
+                    if (answer.ToUpper() == "A" || answer.ToUpper() == "B" || answer.ToUpper() == "C" || answer.ToUpper() == "D")
                     {
-                        return answer; // User answered within time
+                        return answer; // Valid answer within time
                     }
                     else
                     {
-                        Console.WriteLine("Invalid option. Please enter A, B, C or D.");
-                        goto EnterOption;
+                        Console.WriteLine("Invalid option. Please enter A, B, C, or D.");
+                        goto EnterOption; // Ask again if input is invalid
                     }
                 }
             }
-            return ""; // Time ran out
+            return ""; // Return empty if time runs out
         }
 
         public void ShowResults(int correct, int wrong, int timeTaken, int totalQuestions)
@@ -113,9 +126,9 @@
             Console.WriteLine($"Wrong: {wrong}");
             Console.WriteLine($"Time Taken: {timeTaken} seconds");
 
+            // Calculate and display final score
             double score = ((double)correct / totalQuestions) * 100;
             Console.WriteLine($"Final Score: {score:F2}% - {(score > 70 ? "Great Job!" : "Keep Practicing")}");
-
         }
     }
 }
